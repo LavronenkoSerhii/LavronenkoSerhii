@@ -1,0 +1,9 @@
+name: TEST CI/CD
+  on: [push]
+  jobs:
+    first_job:
+        runs-on: ubuntu-latest
+          steps:
+            - run: echo "Start!"
+            - run: ps ax
+            
