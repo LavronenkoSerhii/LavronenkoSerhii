@@ -11,7 +11,6 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Login to Docker
-
         run: docker login -u $DOCKER_NAME --password $DOCKER_TOKEN
 
       - name: check repo
@@ -28,3 +27,8 @@ jobs:
 
   start_container:
     runs-on: bobtrade
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: check repo
+        run: ls -la
