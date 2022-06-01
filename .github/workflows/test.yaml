@@ -24,4 +24,4 @@ jobs:
         run: docker image tag test:latest test:latest
 
       - name: Docker push image
-        run:  docker image push docker.io/$DOCKER_NAME/test
+        run:  docker image push docker.io/$DOCKER_NAME/test:latest
