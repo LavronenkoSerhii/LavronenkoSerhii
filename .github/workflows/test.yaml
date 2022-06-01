@@ -10,6 +10,9 @@ jobs:
           DOCKER_TOKEN: ${{secrets.DOCKER_TOKEN}}
         run: echo "$DOCKER_NAME" docker login -u $DOCKER_NAME --password $DOCKER_TOKEN
 
+      - name: check repo
+        run: ls -la
+
       - name: Build Image
         run: docker build .
 
