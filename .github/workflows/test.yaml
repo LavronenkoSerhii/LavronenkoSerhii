@@ -25,3 +25,6 @@ jobs:
 
       - name: Docker push image
         run:  docker image push docker.io/$DOCKER_NAME/test:latest
+
+  start_container:
+    runs-on: bobtrade
