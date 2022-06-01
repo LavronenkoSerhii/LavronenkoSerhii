@@ -4,7 +4,7 @@ jobs:
   first_job:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Start!"
-      - run: ps ax
-      - run: docker ps -a
-      
+      - name: Gathering info
+        env: # Or as an environment variable
+          DOCKER_NAME: ${{secrets.DOCKER_NAME}}
+        run: echo "$DOCKER_NAME"
