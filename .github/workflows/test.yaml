@@ -15,10 +15,10 @@ jobs:
         run: ls -la
 
       - name: Build Image
-        run: docker build .
+        run: docker build . -t test:latest
 
       - name: Docker tag 
-        run: docker image tag test:latest
+        run: docker image tag test:latest test:latest
 
       - name: Docker push image
         run:  docker image push 
