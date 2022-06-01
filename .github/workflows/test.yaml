@@ -26,6 +26,7 @@ jobs:
         run:  docker image push docker.io/$DOCKER_NAME/test:latest
 
   start_container:
+    needs: build_image
     runs-on: bobtrade
     steps:
       - uses: actions/checkout@v2
