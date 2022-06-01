@@ -12,7 +12,7 @@ jobs:
 
       - name: Login to Docker
 
-        run: echo "$DOCKER_NAME" docker login -u $DOCKER_NAME --password $DOCKER_TOKEN
+        run: docker login -u $DOCKER_NAME --password $DOCKER_TOKEN
 
       - name: check repo
         run: ls -la
