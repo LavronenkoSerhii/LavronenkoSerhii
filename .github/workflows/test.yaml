@@ -33,3 +33,14 @@ jobs:
 
       - name: check repo
         run: ls -la
+        
+  try_env:
+    needs: start_container
+    runs-on: bobtrade
+    environment:
+      name: DEV
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: check ENV variable
+        run: echo $ENV     
