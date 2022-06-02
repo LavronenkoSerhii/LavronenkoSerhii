@@ -39,6 +39,8 @@ jobs:
     runs-on: bobtrade
     environment:
       name: DEV
+    env: # Or as an environment variable
+      ENV: ${{secrets.env}}
     steps:
       - uses: actions/checkout@v2
 
