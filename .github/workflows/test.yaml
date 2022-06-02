@@ -35,7 +35,7 @@ jobs:
         run: ls -la
         
   try_env:
-#     needs: start_container
+    needs: start_container
     runs-on: bobtrade
     environment:
       name: DEV
