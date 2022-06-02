@@ -48,5 +48,5 @@ jobs:
         run: ls -la
 
       - name: check ENV variable
-        run: cd $NV; ls -la
+        run: cd $ENV; ls -la
 
