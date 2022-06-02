@@ -45,4 +45,5 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: check ENV variable
-        run: echo $ENV     
+        run: cd $NV; ls -la
+
