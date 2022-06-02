@@ -50,3 +50,9 @@ jobs:
       - name: check ENV variable
         run: cd $ENV; ls -la
 
+      - name: Archive code coverage results
+        uses: actions/upload-artifact@v3
+        with:
+          name: test.zip
+          path: $ENV/$ENV.txt
+
